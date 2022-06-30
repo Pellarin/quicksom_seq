@@ -333,7 +333,8 @@ def main(ali=None,
     som.bmus, som.error, som.labels, som.density, quantification_error, topo_error = som.predict(dataset=dataset,
                                                                                                  batch_size=batch_size,
                                                                                                  return_density=True,
-												 num_workers=1)
+												 num_workers=1,
+												 return_density=True, return_errors=True)
 
     index = np.arange(len(som.bmus))
     out_arr = np.zeros(n_inp, dtype=[('bmu1', int), ('bmu2', int), ('error', float), ('index', int), ('label', 'U512')])

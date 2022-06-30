@@ -334,7 +334,7 @@ def main(ali=None,
                                                                                                  batch_size=batch_size,
                                                                                                  return_density=True,
 												 num_workers=1,
-												 return_density=True, return_errors=True)
+												 return_errors=True)
 
     index = np.arange(len(som.bmus))
     out_arr = np.zeros(n_inp, dtype=[('bmu1', int), ('bmu2', int), ('error', float), ('index', int), ('label', 'U512')])
